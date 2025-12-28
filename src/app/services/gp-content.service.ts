@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 
-const API = 'http://localhost:3000/api'; 
+const API = 'http://192.168.126.130:3000/api'; 
 
 @Injectable({ providedIn: 'root' })
 export class GpContentService {
