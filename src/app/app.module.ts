@@ -74,7 +74,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     })
   ],
   providers: [
-       {
+         {
       provide: HTTP_INTERCEPTORS,
       useClass: ProjectInterceptor,
       multi: true

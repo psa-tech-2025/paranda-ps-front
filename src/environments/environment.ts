@@ -29,6 +29,6 @@ export const environment = {
  * on performance if an error is thrown.
  */
 // import 'zone.js/plugins/zone-error';  // Included with Angular CLI.
-export const PROJECT_CONFIG = {
-  projectId: 'gp-project-001' // CHANGE PER ANGULAR PROJECT
+  export const PROJECT_CONFIG = {
+  projectId: 'gp-002' // CHANGE PER ANGULAR PROJECT
 };

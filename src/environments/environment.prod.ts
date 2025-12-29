@@ -10,6 +10,6 @@ export const environment = {
 }
 
 };
-export const PROJECT_CONFIG = {
-  projectId: 'gp-project-001' // CHANGE PER ANGULAR PROJECT
+  export const PROJECT_CONFIG = {
+  projectId: 'gp-002' // CHANGE PER ANGULAR PROJECT
 };

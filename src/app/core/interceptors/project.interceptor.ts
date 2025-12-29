@@ -1,27 +1,24 @@
 import { Injectable } from '@angular/core';
 import {
-  HttpEvent,
-  HttpHandler,
   HttpInterceptor,
-  HttpRequest
+  HttpRequest,
+  HttpHandler,
+  HttpEvent
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { PROJECT_CONFIG } from 'src/environments/environment';
-
 
 @Injectable()
 export class ProjectInterceptor implements HttpInterceptor {
-  intercept(
-    req: HttpRequest<any>,
-    next: HttpHandler
-  ): Observable<HttpEvent<any>> {
 
-    const modifiedReq = req.clone({
+  intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+
+    const cloned = req.clone({
       setHeaders: {
-        'x-project-id': PROJECT_CONFIG.projectId
+        'X-Project-Id': 'gp-002'
       }
     });
+    console.log('Interceptor called:', req.url);
 
-    return next.handle(modifiedReq);
+    return next.handle(cloned);
   }
 }
