@@ -4,6 +4,9 @@
 
 export const environment = {
   production: false,
+  
+  apiUrl: '/api',
+  projectId: 'gp-00',
       firebase: {
   apiKey: "AIzaSyB2IXjhzxDC42VOchg92_6H1wsiZvfa33U",
   authDomain: "fir-electionsps.firebaseapp.com",
@@ -29,6 +32,6 @@ export const environment = {
  * on performance if an error is thrown.
  */
 // import 'zone.js/plugins/zone-error';  // Included with Angular CLI.
-  export const PROJECT_CONFIG = {
-  projectId: 'gp-002' // CHANGE PER ANGULAR PROJECT
-};
+//   export const PROJECT_CONFIG = {
+//   projectId: 'gp-00' // CHANGE PER ANGULAR PROJECT
+// };

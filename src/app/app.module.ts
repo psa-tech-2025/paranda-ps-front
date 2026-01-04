@@ -28,7 +28,8 @@ import { VerifyEmailComponent } from './auth/verify-email/verify-email.component
 import { ForgotPasswordComponent } from './auth/forgot-password/forgot-password.component';
 import { HomeAdminComponent } from './component/home-admin/home-admin.component';
 import { SafeUrlPipe } from './pipe/safe-url.pipe';
-import { ProjectInterceptor } from './core/interceptors/project.interceptor';
+import { ProjectIdInterceptor } from './core/interceptors/project.interceptor';
+
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -74,11 +75,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     })
   ],
   providers: [
-         {
-      provide: HTTP_INTERCEPTORS,
-      useClass: ProjectInterceptor,
-      multi: true
-    }
+    { provide: HTTP_INTERCEPTORS, useClass: ProjectIdInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })

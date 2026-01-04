@@ -1,5 +1,8 @@
 export const environment = {
   production: true,
+    apiUrl: 'https://api.myservice.digital/api',
+      projectId: 'gp-00',
+
         firebase: {
   apiKey: "AIzaSyB2IXjhzxDC42VOchg92_6H1wsiZvfa33U",
   authDomain: "fir-electionsps.firebaseapp.com",
@@ -10,6 +13,6 @@ export const environment = {
 }
 
 };
-  export const PROJECT_CONFIG = {
-  projectId: 'gp-002' // CHANGE PER ANGULAR PROJECT
-};
+//   export const PROJECT_CONFIG = {
+//   projectId: 'gp-002' // CHANGE PER ANGULAR PROJECT
+// };

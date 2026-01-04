@@ -1,3 +1,4 @@
+// src/app/core/project-id.interceptor.ts
 import { Injectable } from '@angular/core';
 import {
   HttpInterceptor,
@@ -8,17 +9,18 @@ import {
 import { Observable } from 'rxjs';
 
 @Injectable()
-export class ProjectInterceptor implements HttpInterceptor {
+export class ProjectIdInterceptor implements HttpInterceptor {
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
 
-    const cloned = req.clone({
+    const projectId = 'gp-00'; // or gp-00
+
+    const clonedReq = req.clone({
       setHeaders: {
-        'X-Project-Id': 'gp-002'
+        'x-project-id': projectId
       }
     });
-    console.log('Interceptor called:', req.url);
 
-    return next.handle(cloned);
+    return next.handle(clonedReq);
   }
 }
